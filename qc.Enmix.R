@@ -8,7 +8,7 @@ pheno = read.csv("Meffil_pheno.csv")
 row.names(pheno) = pheno$SampleID 
 dim(pheno)
 
-rgSet <- readidat(path="RawData")
+rgSet <- readidat(path="RawData",force=TRUE)
 rgSet
 
 plotCtrl(rgSet,colnames(rgSet))
