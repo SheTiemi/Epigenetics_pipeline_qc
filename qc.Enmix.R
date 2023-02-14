@@ -15,7 +15,7 @@ plotCtrl(rgSet,colnames(rgSet))
 #colnames indicates the order of the samples
 
 qc<-QCinfo(rgSet)
-save(rgSet,gc,pheno, fiie=paste("ENmix_qc_",date,".RData", sep=""))
+save(rgSet,gc,pheno, file=paste("ENmix_qc_",date,".RData", sep=""))
 
 #Data distribution plots
 mraw <- getmeth(rgSet)
