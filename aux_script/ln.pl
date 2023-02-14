@@ -7,6 +7,7 @@ my $h = <FO>;
 while(<FO>)
 {
         chomp;
+	$_ =~ s/\s+/\\ /g;
         $_ =~ s/\r//g;
 	$_ =~ s/\"//g;
         my $x = $_;
