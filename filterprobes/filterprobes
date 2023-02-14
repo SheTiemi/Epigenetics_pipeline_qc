@@ -1,12 +1,1 @@
-# In this directory you could upload all the files used for the filtering in this step
-Script qc.Enmix.R
-
-line 52:
-filter_data <- function(X){
-    nonspecific_probes <- read.table("/gpfs/ysm/project/montalvo-ortiz/stn7/scripts/removalCpGs/nonspecific_probes.txt")[,1]
-    polymorphic_probes <- read.table("/gpfs/ysm/project/montalvo-ortiz/stn7/scripts/removalCpGs/polymorphic_cpgs.txt")[,1]
-    cross = read.csv("/gpfs/ysm/project/montalvo-ortiz/stn7/scripts/removalCpGs/cross.csv",stringsAsFactors=FALSE,header=TRUE)[,1]
-    meffil = read.csv("CpGremoval/Meffil_badCpGs.csv",stringsAsFactors=FALSE,header=TRUE)
-    exclude <- union(union(nonspecific_probes,union(polymorphic_probes,cross)),meffil)
-    return(X[setdiff(rownames(X),exclude),])
-}
+# Files requested during filter_data
